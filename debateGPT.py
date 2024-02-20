@@ -175,7 +175,7 @@ def generate_seller_answer(
 ##################################### main flow mine #######################################################
 ############################################################################################################
 
-def start_selling(
+def debate(
     debate_topic,
     debater_viewpoint,
     with_sound=False # flag to turn ON and OFF the speech-to-text and text-to-speech
@@ -241,7 +241,7 @@ if __name__ == "__main__":
     debate_topic: str = "Should men be drafter to army forcefully or not"
     debater_viewpoint: str = "Draft to army should be forced, because countries need to protect their borders by ensuring their safety and because there is no other way to fight in wars in case a country is attacked."
     
-    start_selling(
+    debate(
         debate_topic,
         debater_viewpoint,
         with_sound=False
