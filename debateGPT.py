@@ -1,5 +1,5 @@
 
-import json, requests, whisper, pyttsx3
+import json, requests, whisper, pyttsx3, ollama
 import speech_recognition as sr
 
 source = sr.Microphone()
@@ -12,7 +12,7 @@ sys_conversation_history = []
 sys_conversation_stages = {
     '1': "Introduction: Begin the debate by stating your position clearly and concisely. Make sure your audience understands the topic and your stance.",
     '2': "Presentation of your argument: Provide evidence and logical reasoning to support your position. Use facts, statistics, and examples to strengthen your argument.",
-    '3': "Counter-argument: Analyze the argument of your opponent and their points and prepare counter-argument. Look for flaws and inconsistency in their words and exploit them to create your counter-argument..",
+    '3': "Counter-argument: Analyze the argument of your opponent and their points and prepare counter-argument. Look for flaws and inconsistency in their words and exploit them to create your counter-argument. Ask questions that would highlight logical fallacies in opponent's argument.",
     '4': "Rebuttal: Address the counter-arguments by refuting them with stronger evidence or by highlighting inconsistencies in their logic.",
     '5': "Summarization: After presenting your arguments and rebuttals, summarize the main points of your debate for the audience to consider.",
     '6': "Conclusion: Conclude your debate by restating your position and summarizing the main points. You may also include a call to action for the audience to consider your perspective.",
