@@ -204,7 +204,7 @@ def debate(
         sys_current_stage
         )
     print("\n\n")
-    print(f">>CONV_STAGE: {sys_current_stage}")
+    print(f">>CONV_STAGE: Opening.")
     print(f"DebateGPT: {answer}\n")
     
     # Sound output
@@ -219,11 +219,11 @@ def debate(
         if with_sound == True:
             # Sound input
             user_input = sound_listen()
-            print(f"Human: {user_input}\n")
+            print(f"Opponent: {user_input}\n")
             
         else:
             # Text input
-            user_input = input("Human: ")
+            user_input = input("Opponent: ")
         
         print('\n')
         process_human_input(user_input)
