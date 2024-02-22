@@ -1,7 +1,4 @@
 
-PERPLEX_API = ""
-########################################################################################################
-
 import json, requests, whisper, pyttsx3
 import speech_recognition as sr
 
@@ -119,7 +116,7 @@ def process_human_input(human_input):
 
 # LLM Answer
 
-def generate_seller_answer(
+def generate_debater_answer(
     debate_topic,
     debater_viewpoint,
     sys_conversation_history,
@@ -186,7 +183,7 @@ def debate(
     sys_current_stage = "1"
 
     # 1.2. Introduction - Generate first LLM response to open the conversation with the prospect:
-    answer = generate_seller_answer(
+    answer = generate_debater_answer(
         debate_topic,
         debater_viewpoint,
         sys_conversation_history,
@@ -222,7 +219,7 @@ def debate(
         # 4.1. Determine conversation stage:
         sys_current_stage = determine_conversation_stage(sys_conversation_history, sys_conversation_stages,sys_current_stage)
         # 4.2. Generate LLM answer:
-        answer = generate_seller_answer(
+        answer = generate_debater_answer(
             debate_topic,
             debater_viewpoint,
             sys_conversation_history,
