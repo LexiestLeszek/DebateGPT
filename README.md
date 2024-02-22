@@ -29,8 +29,8 @@ To get started with this project, you will need to:
 ## Example Usage
 
 ```python
-debate_topic = "Should men be drafted to the army forcefully or not"
-debater_viewpoint = "Draft to army should be forced, because countries need to protect their borders by ensuring their safety and because there is no other way to fight in wars in case a country is attacked."
+debate_topic: str = "Should the government provide a guaranteed basic income for all citizens."
+debater_viewpoint: str = "A guaranteed basic income is bad, because it makes people dependent on government, reduces incentives for work and entrepreneurship, gives too much power to the government."
 
 debate(debate_topic, debater_viewpoint, with_sound=True)
 ```
