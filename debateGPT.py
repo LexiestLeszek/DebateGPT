@@ -37,6 +37,19 @@ def sound_speak(text):
     engine.say(text)
     engine.runAndWait() 
 
+def ask_llm_ollama(prompt):
+    
+    response = ollama.chat(model='qwen:1.8b', messages=[
+        {
+            'role': 'user',
+            'content': prompt,
+        },
+    ])
+    
+    answer = response['message']['content']
+
+    return answer
+
 def ask_llm(prompt):
     
     pplx_key = PERPLEX_API
