@@ -137,7 +137,7 @@ def generate_debater_answer(
     sys_current_stage
     ):
 
-    prompt = f"""You are a debater.
+    prompt = f"""You are a professional debater.
         Your name is DebateGPT. You are debating on the topic: {debate_topic}.
         You are representing the viewpoint: {debater_viewpoint}.
 
@@ -219,11 +219,11 @@ def debate(
         if with_sound == True:
             # Sound input
             user_input = sound_listen()
-            print(f"Prospect: {user_input}\n")
+            print(f"Human: {user_input}\n")
             
         else:
             # Text input
-            user_input = input("User: ")
+            user_input = input("Human: ")
         
         print('\n')
         process_human_input(user_input)
@@ -248,8 +248,8 @@ def debate(
 if __name__ == "__main__":
     
     ##### Defining all the variables:
-    debate_topic: str = "Should men be drafter to army forcefully or not"
-    debater_viewpoint: str = "Draft to army should be forced, because countries need to protect their borders by ensuring their safety and because there is no other way to fight in wars in case a country is attacked."
+    debate_topic: str = "Should the government provide a guaranteed basic income for all citizens."
+    debater_viewpoint: str = "A guaranteed basic income is bad, because it makes people dependent on government, reduces incentives for work and entrepreneurship, gives too much power to the government."
     
     debate(
         debate_topic,
