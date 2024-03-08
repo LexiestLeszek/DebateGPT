@@ -195,7 +195,7 @@ def debate(
     # 1.1. Set Conversation Stage to 1 (default) to start the dialogue
     sys_current_stage = "1"
 
-    # 1.2. Introduction - Generate first LLM response to open the conversation with the prospect:
+    # 1.2. Introduction - Generate first LLM response to open the conversation with the opponet:
     answer = generate_debater_answer(
         debate_topic,
         debater_viewpoint,
@@ -228,10 +228,10 @@ def debate(
         print('\n')
         process_human_input(user_input)
         
-        ##### STEP 2: Generate answer from the sales agent
-        # 4.1. Determine conversation stage:
+        ##### STEP 2: Generate answer from the debate agent
+        # 2.1. Determine conversation stage:
         sys_current_stage = determine_conversation_stage(sys_conversation_history, sys_conversation_stages,sys_current_stage)
-        # 4.2. Generate LLM answer:
+        # 2.2. Generate LLM answer:
         answer = generate_debater_answer(
             debate_topic,
             debater_viewpoint,
