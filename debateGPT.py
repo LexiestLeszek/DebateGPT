@@ -39,7 +39,7 @@ def sound_speak(text):
 
 def ask_llm_ollama(prompt):
     
-    response = ollama.chat(model='qwen:1.8b', messages=[
+    response = ollama.chat(model='phi3:3.8b-mini-instruct-4k-fp16', messages=[
         {
             'role': 'user',
             'content': prompt,
@@ -55,7 +55,7 @@ def ask_llm(prompt):
     pplx_key = PERPLEX_API
     url = "https://api.perplexity.ai/chat/completions"
     payload = {
-        "model": "mixtral-8x7b-instruct",
+        "model": "llama-3-sonar-large-32k-chat",
         "temperature": 0.4,
         "messages": [
             {
